@@ -1,0 +1,74 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Crypto-Service",
+      "description": "Crypto Service Node.js Application API",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/api/v1",
+    "tags": [
+      {
+        "name": "crypto",
+        "description": "API for crypto services in the system"
+      }
+    ],
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/crypto/client/": {
+        "get": {
+          "tags": [
+            "client"
+          ],
+          "summary": "Get client information in system",
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/info"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "User": {
+        "required": [
+          "email",
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "email": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "firstName": {
+            "type": "string"
+          }
+        }
+      },
+      "info": {
+        "type": "string"
+      }
+    }
+  }

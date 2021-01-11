@@ -18,6 +18,21 @@
 *.zip
 *.tar.gz
 *.rar
+*.classpath
+*.project
 
+*pom.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/.metadata/
+
+*/bin
+*/mvnw
+*/node_modules/
+*/.factorypath
+*/.settings
+*/.mvn
+authentication-service/target
+*.jar
+discovery-server/.mvn/wrapper/maven-wrapper.jar
+discovery-server/.mvn/wrapper/maven-wrapper.jar
